@@ -1,0 +1,281 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1rem 1.5rem;
+   
+}
+#logo{
+    width: 20%;
+}
+.hamburger {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #101010;
+}
+.nav-menu {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.nav-item {
+    margin-left: 5rem;
+}
+
+.nav-link{
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #475569;
+}
+
+.nav-link:hover{
+    color: #482ff7;
+}
+
+.nav-logo {
+    font-size: 2.1rem;
+    font-weight: 500;
+    color: #482ff7;
+}
+
+@media only screen and (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 5rem;
+        flex-direction: column;
+        background-color: #fff;
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+    .navbar{
+        width: 50%;
+        justify-content: space-between;
+
+    }
+    #logo{
+        width: 50%;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-item {
+        margin: 2.5rem 0;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+}
+.decouverte h3{
+    font-size: 25px;
+}
+h1{
+    font-family: 'Lemon', cursive;
+    font-size: 30px;
+    color:#b40052;
+}
+section p{
+   margin:10px;
+    font-family: 'Montserrat', sans-serif;
+    font-size:21px;
+}
+section span{
+    color: #265173;
+}
+.inline-img{
+    display: flex;  
+}
+.inline-img img{
+    width: 30%;
+    margin: auto;
+
+   
+}
+#two{
+    margin: 0px 0px;
+}
+.antalya-img {
+    display: flex;
+}
+.antalya-img>div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;  
+    margin:auto;
+    width: 48%;
+   
+}
+#img-space{
+    margin-bottom:20px ;
+}
+
+.pamukkale-img{
+    display: flex;
+}
+main,footer{
+    width: 80%;
+    margin: auto;
+}
+.pamukkale-img div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin:auto;
+    width: 48%;
+} 
+.fathiye-img{
+    display: flex;
+}
+
+.fathiye-img div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 10px;
+    width: 50%;
+    
+}
+#center{
+    margin: auto;
+}
+.call{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.call h3{
+    color: rgb(163, 40, 40);
+    font-size: 25px;
+    
+}
+.adress{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.local,.internet{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.internet a{
+    color: #101010;
+}
+#colorize{
+    background: rgb(202, 202, 202);
+    width: 100%;
+    height: 30px;
+    color: rgb(202, 202, 202);
+}
+.local h3,.internet h3{
+    color: #1c4155;
+    font-size: 15px;
+}
+
+.local h2,.internet h2{
+    font-size:23px;
+}
+.antalya-img h3{
+    margin-bottom:110px ;
+}
+
+@media(max-width:768px){
+    .pamukkale-img {
+        flex-direction: column;
+    }
+    .fathiye-img {
+        flex-direction: column;
+    }
+    .antalya-img{
+        flex-direction: column;
+    }
+    .pamukkale-img div, .antalya-img div,.fathiye-img div{
+        width: 80%;
+        margin: auto;
+    }
+    #img-space{
+        margin-bottom:20px ;
+    }
+    .inline-img{
+        flex-direction: column;
+        align-items: center;
+    }
+    .inline-img img{
+        margin: 10px 0px;
+        width:80%;
+        
+    }
+    footer div{
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        margin-top: 20px;
+    }
+    .call{
+        flex-direction: row;
+    }
+    .decouverte>img{
+        width: 500px;
+    }
+}
+@media(max-width:425px){
+    .decouverte>img{
+        width: 300px;
+    }
+}
+@media(max-width:1024px){
+    .antalya-img h3{
+        margin-bottom:30px ;
+    }
+}
